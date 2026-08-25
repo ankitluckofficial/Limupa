@@ -19,4 +19,7 @@ class FrontPageController extends Controller
      public function contact() {
         return view('page.contact');
     }
+     public function shop() {
+        return view('page.shop');
+    }
 }
