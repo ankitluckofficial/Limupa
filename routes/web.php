@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\FrontPageController;
 use App\Http\Controllers\Front\AuthController; // ✅ Capital F
+use App\Http\Controllers\Backend\DashboardController;
 
 // Front pages
 Route::get('/', [FrontPageController::class, 'welcome']);
@@ -23,3 +24,6 @@ Route::get('/forgot-password', function () {
 // Register routes
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
