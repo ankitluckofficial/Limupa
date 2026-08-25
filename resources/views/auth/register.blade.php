@@ -1,7 +1,7 @@
-@extends('leyout.main')
+@extends("leyout.main")
 
 @section('content')
-<div class="container">
+<div class="register-box">
     <h2>Register</h2>
     <form method="POST" action="{{ route('register') }}">
         @csrf
@@ -25,7 +25,7 @@
             <input type="password" name="password_confirmation" class="form-control" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Register</button>
+        <button type="submit" class="btn-submit">Register</button>
     </form>
 </div>
 @endsection

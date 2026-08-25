@@ -11,6 +11,10 @@ class AuthController extends Controller
   public function showLoginForm() {
         return view('auth.login');
     }
+     // Show register form
+    public function showRegisterForm() {
+        return view('auth.register');
+    }
 
     // public function login(Request $request) {
     //     $credentials = $request->only('email', 'password');
