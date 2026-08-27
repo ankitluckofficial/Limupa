@@ -177,7 +177,7 @@
                              <!-- Single Product -->
                              <div class="single-product-wrap">
                                  <div class="product-image">
-                                     <a href="single-product.html">
+                                     <a href="{{ url('/digitalProducts') }}">
                                          <img src="images/product/large-size/1.jpg" alt="Product Image">
                                      </a>
                                      <span class="sticker">New</span>

@@ -15,6 +15,8 @@ Route::get('/', [FrontPageController::class, 'welcome']);
 Route::get('/shop', [FrontPageController::class, 'shop']);
 Route::get('/about', [FrontPageController::class, 'about']);
 Route::get('/contact', [FrontPageController::class, 'contact']);
+Route::get('/digitalProducts', [FrontPageController::class, 'digitalProducts'])
+    ->name('digitalProducts');
 
 // Front Auth routes
 Route::get('/login', [FrontAuthController::class, 'showLoginForm'])->name('login');
