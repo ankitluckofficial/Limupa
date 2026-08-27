@@ -12,10 +12,9 @@
 
     {{-- Favicon --}}
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Limupa Dashboard</title>
-   <link rel="stylesheet" href="{{ asset('backend/css/newweb.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/newweb.css') }}">
 
 
     {{-- AdminKit CSS --}}
@@ -49,72 +48,54 @@
 
             <div class="sidebar-content js-simplebar">
 
-                <a class="sidebar-brand" href="{{ url('/admin/dashboard') }}">
+                <a class="sidebar-brand" href="#">
                     <img src="{{ asset('images/menu/logo/2.jpg') }}" alt="Logo">
                 </a>
 
                 <ul class="sidebar-nav">
 
                     <li class="sidebar-header">
-                        Pages
+                        Limupa
                     </li>
 
-                    <li class="sidebar-item active">
+                    <li class="sidebar-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                         <a class="sidebar-link" href="{{ route('dashboard') }}">
                             Dashboard
                         </a>
                     </li>
-                    <li class="sidebar-item active">
-                        <a class="sidebar-link" href="ui-forms.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-check-square align-middle">
-                                <polyline points="9 11 12 14 22 4"></polyline>
-                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                            </svg> <span class="align-middle">Forms</span>
-                        </a>
-                    </li>
 
-                    <li class="sidebar-item">
+                    <li class="sidebar-item {{ request()->routeIs('banners.index') ? 'active' : '' }}">
                         <a class="sidebar-link" href="{{ route('banners.index') }}">
                             <i class="align-middle" data-feather="image"></i>
                             <span class="align-middle">Banners</span>
                         </a>
                     </li>
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
+                    <li class="sidebar-item {{ request()->routeIs('products.index') ? 'active' : '' }}">
+                        <a class="sidebar-link" href="{{ route('products.index') }}">
+                            <i class="align-middle" data-feather="box"></i>
+                            <span class="align-middle">Products</span>
+                        </a>
+                    </li>
 
+                    <li class="sidebar-item {{ request()->routeIs('users.index') ? 'active' : '' }}">
+                        <a class="sidebar-link" href="{{ route('users.index') }}">
                             <i class="align-middle" data-feather="users"></i>
-
-                            <span class="align-middle">
-                                Users
-                            </span>
-
+                            <span class="align-middle">Users</span>
                         </a>
                     </li>
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
-
-                            <i class="align-middle" data-feather="shopping-cart"></i>
-
-                            <span class="align-middle">
-                                Orders
-                            </span>
-
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">
-
+                    <li class="sidebar-item {{ request()->routeIs('settings.index') ? 'active' : '' }}">
+                        <a class="sidebar-link" href="{{ route('settings.index') }}">
                             <i class="align-middle" data-feather="settings"></i>
+                            <span class="align-middle">Settings</span>
+                        </a>
+                    </li>
 
-                            <span class="align-middle">
-                                Settings
-                            </span>
-
+                    <li class="sidebar-item {{ request()->routeIs('about.index') ? 'active' : '' }}">
+                        <a class="sidebar-link" href="{{ route('about.index') }}">
+                            <i class="align-middle" data-feather="info"></i>
+                            <span class="align-middle">About</span>
                         </a>
                     </li>
 

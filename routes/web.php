@@ -6,6 +6,10 @@ use App\Http\Controllers\Front\AuthController as FrontAuthController; // Front A
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AuthController as BackendAuthController; // Backend Auth
 use App\Http\Controllers\Backend\BannerController;
+use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\SettingsController;
+use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\UserController;
 // Front pages
 Route::get('/', [FrontPageController::class, 'welcome']);
 Route::get('/shop', [FrontPageController::class, 'shop']);
@@ -38,3 +42,13 @@ Route::resource('banners', BannerController::class);
 // Route::middleware(['adminauth'])->group(function () {
 //     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 // });
+Route::resource('products', ProductController::class);
+Route::resource('settings', SettingsController::class);
+// Route::resource('about', AboutController::class);
+Route::resource('users', UserController::class);
+
+Route::prefix('admin')->group(function () {
+
+    Route::resource('about', AboutController::class);
+
+});
