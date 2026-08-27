@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +11,12 @@
     <meta name="keywords" content="admin, dashboard, bootstrap, laravel">
 
     {{-- Favicon --}}
-   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Limupa Dashboard</title>
+   <link rel="stylesheet" href="{{ asset('backend/css/newweb.css') }}">
+
 
     {{-- AdminKit CSS --}}
     <link rel="stylesheet" href="{{ asset('backend/css/app.css') }}">
@@ -48,7 +50,7 @@
             <div class="sidebar-content js-simplebar">
 
                 <a class="sidebar-brand" href="{{ url('/admin/dashboard') }}">
-                     <img src="{{ asset('images/menu/logo/2.jpg') }}" alt="Logo">
+                    <img src="{{ asset('images/menu/logo/2.jpg') }}" alt="Logo">
                 </a>
 
                 <ul class="sidebar-nav">
@@ -60,6 +62,23 @@
                     <li class="sidebar-item active">
                         <a class="sidebar-link" href="{{ route('dashboard') }}">
                             Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="ui-forms.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check-square align-middle">
+                                <polyline points="9 11 12 14 22 4"></polyline>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg> <span class="align-middle">Forms</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('banners.index') }}">
+                            <i class="align-middle" data-feather="image"></i>
+                            <span class="align-middle">Banners</span>
                         </a>
                     </li>
 
@@ -105,7 +124,7 @@
 
         </nav>
 
-   {{-- =========================================================
+        {{-- =========================================================
         MAIN
     ========================================================== --}}
         <div class="main">

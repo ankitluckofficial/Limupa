@@ -5,7 +5,7 @@ use App\Http\Controllers\Front\FrontPageController;
 use App\Http\Controllers\Front\AuthController as FrontAuthController; // Front Auth
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AuthController as BackendAuthController; // Backend Auth
-
+use App\Http\Controllers\Backend\BannerController;
 // Front pages
 Route::get('/', [FrontPageController::class, 'welcome']);
 Route::get('/shop', [FrontPageController::class, 'shop']);
@@ -32,6 +32,7 @@ Route::get('/admin/login', [BackendAuthController::class, 'showLoginForm'])->nam
 // Route::post('/admin/logout', [BackendAuthController::class, 'logout'])->name('admin.logout');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::resource('banners', BannerController::class);
 
 // // Protected dashboard
 // Route::middleware(['adminauth'])->group(function () {
