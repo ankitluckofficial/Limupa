@@ -84,6 +84,12 @@
                             <span class="align-middle">Users</span>
                         </a>
                     </li>
+                    <li class="sidebar-item {{ request()->routeIs('contacts.index') ? 'active' : '' }}">
+                        <a class="sidebar-link" href="{{ route('contacts.index') }}">
+                            <i class="align-middle" data-feather="mail"></i>
+                            <span class="align-middle">Contacts</span>
+                        </a>
+                    </li>
 
                     <li class="sidebar-item {{ request()->routeIs('settings.index') ? 'active' : '' }}">
                         <a class="sidebar-link" href="{{ route('settings.index') }}">

@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\ContactController;
 // Front pages
 Route::get('/', [FrontPageController::class, 'welcome']);
 Route::get('/shop', [FrontPageController::class, 'shop']);
@@ -52,5 +53,7 @@ Route::resource('users', UserController::class);
 Route::prefix('admin')->group(function () {
 
     Route::resource('about', AboutController::class);
+    Route::resource('contacts', ContactController::class);
 
 });
+Route::get('contacts/show', [ContactController::class, 'show'])->name('contacts.show');
