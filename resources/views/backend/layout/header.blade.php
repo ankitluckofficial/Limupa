@@ -58,8 +58,8 @@
                         Limupa
                     </li>
 
-                    <li class="sidebar-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                        <a class="sidebar-link" href="{{ route('dashboard') }}">
+                    <li class="sidebar-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                        <a class="sidebar-link" href="{{ route('admin.dashboard') }}">
                             Dashboard
                         </a>
                     </li>
