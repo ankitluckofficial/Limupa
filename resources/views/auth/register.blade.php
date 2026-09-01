@@ -3,7 +3,7 @@
 @section('content')
 <div class="register-box">
     <h2>Register</h2>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="">
         @csrf
         <div class="form-group">
             <label>Name</label>
