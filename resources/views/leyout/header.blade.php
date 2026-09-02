@@ -241,7 +241,7 @@
                                     <!-- ================= ACCOUNT ================= -->
                                     <li class="hm-account">
 
-                                        <a href="" title="Login">
+                                        <a  title="Login">
                                             <i class="fa fa-user"></i>
                                         </a>
 
